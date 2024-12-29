@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>DuoJourney - ログイン</title>
+</head>
+<body>
+<header>
+    <div></div>
+</header>
+<main>
+    <form th:action="@{/login}" method="POST">
+        <div class="mb-3">
+            <label for="user_id" class="form-label">ユーザーID</label>
+            <input type="text" id="user_id" name="user_id" class="form-control" aria-describedby="userIdHelpBlock">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">パスワード</label>
+            <input type="password" id="password" name="password" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <button type="submit" class="btn btn-large btn-success">ログイン</button>
+    </form>
+</main>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DuoJourney - ホーム</title>
+</head>
+<body>
+    <p>ようこそ、<span th:text="${user.firstName} + ' ' + ${user.lastName}"></span>さん！</p>
+</body>
+</html>
