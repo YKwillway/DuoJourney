@@ -1,0 +1,45 @@
+@startuml
+' カラムはスネークケースで記述する
+' 図を描画するためにGraphvizをインストールする
+' Graphviz dot executableのパスを指定する
+Entity User {
+  + id : INT <<PK>>
+  + birth_day : VARCHAR(255)
+  + first_name : VARCHAR(45)
+  + last_name : VARCHAR(45)
+  + email : VARCHAR(45)
+  + password: VARCHAR(45) <<NOT NULL>>
+}
+
+
+'Entity Partner {
+'}
+
+Entity Diary {
+  + id : INT <<PK>>
+  + user_id : INT <<FK>>
+  + entry_date : DATE
+  + title : VARCHAR(30)
+  + content : TEXT
+  + location : VARCHAR(255)
+  + created_at : TIMESTAMP
+}
+
+Entity Image {
+  + id : INT <<PK>>
+  + diary_id : INT <<FK>>
+  + image_url : VARCHAR(255) <<NOT NULL>>
+}
+
+Entity Anniversary {
+  + id : INT <<PK>>
+  + user_id : INT <<FK>>
+  + date : DATE
+  ' Instagramの文字数上限を参考
+  + name : VARCHAR(2200)
+}
+
+User "1" -- "0.*" Diary : has
+User "1" -- "0.*" Anniversary : has
+Diary "1" -- "0.*" Image : has
+@enduml
