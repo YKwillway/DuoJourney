@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>DuoJourney - ログイン</title>
+    <link rel="icon" type="image/jpg" href="/logo.jpg">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="container">
 <header>
-    <div></div>
+    <img id="logo" src="/logo.jpg" alt="DuoJourney's logo img">
 </header>
 <main>
     <form th:action="@{/login}" method="POST">
-        <div class="mb-3">
-            <label for="user_id" class="form-label">ユーザーID</label>
-            <input type="text" id="user_id" name="user_id" class="form-control" aria-describedby="userIdHelpBlock">
+        <div class="form-floating mb-3 form-section">
+            <input type="text" id="user_id" class="form-control" name="user_id" placeholder="userid or email" aria-describedby="userIdHelpBlock">
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">パスワード</label>
-            <input type="password" id="password" name="password" class="form-control" aria-describedby="passwordHelpBlock">
+        <div class="form-floating mb-3 form-section">
+            <input type="text" id="password" class="form-control" name="user_id" placeholder="password" aria-describedby="userIdHelpBlock">
         </div>
-        <button type="submit" class="btn btn-large btn-success">ログイン</button>
+        <button type="submit" class="btn btn-large btn-success">Sign in</button>
     </form>
 </main>
 <footer></footer>
